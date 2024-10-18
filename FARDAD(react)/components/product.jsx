@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/fetch";
 
-const Product = () => {
+const Product = ({UserInf}) => {
 
 
     const id = useParams().id
@@ -9,7 +9,8 @@ const Product = () => {
     const data = useFetch("https://fakestoreapi.com/products/" + id)
 
     return(
-        <div className="product">
+                <>
+                {UserInf.email ?         <div className="product">
             <img src={data.image}/>
             <div>
                 <h1>{data.title}</h1>
@@ -18,7 +19,8 @@ const Product = () => {
                 <h1>{data.price} $</h1>
 
             </div>
-        </div>
+        </div> : "you must login"}
+                </>
     )
 }
 

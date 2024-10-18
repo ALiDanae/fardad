@@ -1,37 +1,42 @@
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
-const LoginForm = ({setInf}) => {
+const LoginForm = ({ setInf }) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [data, setData] = useState([]);
+    const navigate = useNavigate()
 
     const onSubmit = (data) => {
         setData(prev => [...prev, data])
+
+
     }
 
-    if(data[0]){
-       setInf(data[0]);
+    if (data[0]) {
+        setInf(data[0])
+        navigate("/products")
     }
 
 
 
-    
+
 
     return (
         <>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input
 
-                    placeholder=""
+                    placeholder="Name"
                     {...register("name")} />
                 <input
 
-                    placeholder=""
+                    placeholder="Phone Number"
                     {...register("phoneNumber")}
                 />
                 <input
 
-                    placeholder=""
+                    placeholder="Email"
                     {...register("email", {
                         pattern: {
                             value: /^.*@gmail.com$/,
@@ -42,7 +47,7 @@ const LoginForm = ({setInf}) => {
                 <button
 
                     type='submit'>
-                    button
+                    submit
                 </button>
 
             </form>

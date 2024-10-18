@@ -1,13 +1,13 @@
-body{
+body {
   background: #FEFAE0;
 }
 
 
-.header{
-  margin: 2rem 0 ;
-  display:flex;
-  padding: 1rem 0 ;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.header {
+  margin: 2rem 0;
+  display: flex;
+  padding: 1rem 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   width: 100%;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -16,20 +16,54 @@ body{
   background: #283618;
 }
 
-.header h1{
+.header h1 {
   margin: 1rem;
 }
 
-.productslist{
-  width: 100%;
-  display: flex;
-  flex-flow:row wrap ;
-  justify-content: space-around;
-  border: 3px solid #283618 ;
-  color:#283618 ;
+.header h2{
+  margin: 2rem;
+  border: 3px solid #DDA15E;
+  padding: 1rem;
+}
+.header h2:hover{
+  color: #283618;
+  border: 3px double #DDA15E;
+  background-color: #DDA15E;
 }
 
-.products{
+
+form button {
+  display: block;
+  width: 50%;
+  margin: auto;
+  padding: 3rem;
+  background-color: #283618;
+  color: #DDA15E;
+  font-size: xx-large;
+  font-family: cursive
+}
+form input {
+
+  width: 20%;
+  margin: 3rem;
+  padding: 3rem;
+  background-color: #DDA15E;
+  color: #283618;
+  font-size: xx-large;
+  font-family: cursive
+}
+
+
+.productslist {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  border: 3px solid #283618;
+  color: #283618;
+}
+
+.products {
   width: 20%;
   margin: 1rem;
   padding: 2rem;
@@ -39,43 +73,70 @@ body{
   font-size: large;
   color: #283618;
   background-color: #FEFAE0;
-  transition: background-color 0.3s ;
+  transition: background-color 0.3s;
 }
 
-.products:hover{
-background-color: #283618;
-color: #FEFAE0;
+.products:hover {
+  background-color: #283618;
+  color: #FEFAE0;
 }
-.products img{
+
+.products img {
   width: 100%;
   margin-bottom: 3rem;
   border: 3px solid #283618;
   border-radius: 40px;
 }
 
-.products button{
+.products button {
   width: 100%;
   margin-top: 3rem;
   padding: 3rem;
   background-color: #283618;
   color: #DDA15E;
   font-size: xx-large;
-  font-family: cursive
+  font-family: cursive;
+  border-radius: 50px;
 }
-.logo{
+
+.logo {
   font-size: xx-large;
   font-family: cursive;
 }
 
-.product{
+.product {
   width: 100%;
   background-color: #283618;
   display: flex;
-  color:#DDA15E ;
+  color: #DDA15E;
   text-align: center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-size:large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
 }
-.product img{
+
+.product img {
   width: 20%;
+}
+
+
+.added{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: xx-large;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.added button{
+  width: 25%;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #283618;
+  color: #DDA15E;
+  font-size: xx-large;
+  font-family: cursive;
+  border-radius: 50px;
+  text-align: center;
+  align-items: center;
+
 }

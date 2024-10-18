@@ -3,7 +3,7 @@ import LoginForm from "./LoginForm"
 import ProductList from "./ProductList"
 
 
-const Home = ({ UserInf , setInf }) => {
+const Home = ({ UserInf , setInf  }) => {
 
     
 
@@ -11,7 +11,7 @@ const Home = ({ UserInf , setInf }) => {
         <>
 
            <div>
-           {UserInf.phoneNumber ? <ProductList /> : <LoginForm setInf={setInf}/>}
+           {UserInf.phoneNumber ? <ProductList  /> : <LoginForm setInf={setInf}/>}
 
            </div>
 
